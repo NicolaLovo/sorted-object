@@ -1,10 +1,10 @@
 export const Greeter = (name: string) => `Hello ${name}`;
 
-interface Property<T> {
+export interface Property<T> {
   key: string;
   value: T;
 }
-interface PropertyMap<T> {
+export interface PropertyMap<T> {
   [key: string]: T;
 }
 
@@ -82,6 +82,7 @@ class SortedObject<T> {
   getKeys() {
     return this.object.map((prop) => prop.key);
   }
+
   /**
    * Get the values of the object
    * @returns PropertyMap<T>[] the values of the object
@@ -155,3 +156,5 @@ console.log(obj.keyOf(4));
 // obj.log();
 // obj.sort((a, b) => a.value - b.value);
 // obj.log();
+
+export default SortedObject;
