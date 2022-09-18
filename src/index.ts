@@ -6,6 +6,11 @@ export interface PropertyMap<T> {
   [key: string]: T;
 }
 
+// ! map<u> => U, return obj.map (come in react: parte da obj => React.Node)
+//! add operator obj["aaa"] => obj.aaa
+// ! mutate => come map ma modifica l'oggetto: obj = obj.map
+// ! hasKey, hasValue, hasProperty, hasPropertyWithValue, hasPropertyWithKey, hasPropertyWithKeyAndValue
+
 class SortedObject<T> {
   private object: Property<T>[] = [];
   /**
